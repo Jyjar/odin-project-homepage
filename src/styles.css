@@ -26,17 +26,16 @@ header {
 
 header:before {
     content: '';
-	width: 100%;
-	height: 70vh;
-	position: absolute;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
     background-color: rgb(7, 145, 181);
-	clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
-	z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
+    z-index: -1;
 }
 
 .header-content {
     margin: 30px;
-
 }
 
 .header-image {
@@ -63,17 +62,21 @@ header:before {
 .about-me {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
     margin-top: 20px;
 }
 
+.about-me > h2 {
+    text-align: center;
+}
+
 .header-icons {
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
-main {
+.main-content {
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -155,11 +158,11 @@ footer > image {
     padding: 10px 10px 50px 10px;
 }
 
-.contact-me > p {
+.contact-content > p {
     font-size: 20px;
 }
 
-.footer-content {
+.contact-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -181,4 +184,87 @@ footer > image {
     height: 300px;
     width: 100%;
     margin-bottom: -5px;
+}
+
+@media (min-width: 920px) {
+
+    header:before {
+        height: 50vh;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+    }
+
+    .header-image {
+        height: 50vh;
+        white-space: nowrap;
+    }
+
+    .header-image > h1 {
+        font-size: 40px;
+    }
+
+    .about-me {
+        background-color: white;
+        box-shadow: 1px 1px 5px grey;
+        height: 100%;
+        margin-top: 0px;
+        padding: 20px;
+    }
+
+    .about-me > h2 {
+        text-align: start;
+    }
+
+    .header-icons {
+        display: flex;
+        justify-content: end;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-content {
+        max-width: 1000px;
+        align-items: start;
+    }
+
+    .main-content > h2 {
+        text-align: start;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+    }
+
+    .contact-me {
+        align-items: start;
+    }
+
+    .contact-icons {
+        justify-content: start;
+    }
+}
+
+@media (min-width: 600px) {
+
 }
